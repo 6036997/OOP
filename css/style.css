@@ -1,47 +1,46 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --main-color--: #ff2c1f;
+    --text-color--: #020307;
+    --bg-color--: #fff
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+body{
+    background: var(--text-color--);
+    color: var(--bg-color--);
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+.heading{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--main-color--);
 }
 
-.movies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.movie-container {
+    max-width: 068px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px));
     gap: 1rem;
-    padding: 2rem;
+    margin-top: 2rem;
 }
 
-.movie {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    text-align: center;
-    width: calc(25% - 1rem); /* Vier films per rij */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.movie img {
+.box .box-img {
     width: 100%;
-    height: auto;
-    border-bottom: 1px solid #ddd;
+    height: 270px;
 }
 
-.movie h2 {
-    font-size: 1rem;
-    padding: 0.5rem;
+.box .box-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.box .box-img img{
+    transform: translateY(-10px);
+    transition: 0,2 all linear;
 }
