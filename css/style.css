@@ -17,5 +17,6 @@
 
 }
 body{
-    background: va;
+    background: var(--text-color);
+    color: var(var(--bg-color));
 }
