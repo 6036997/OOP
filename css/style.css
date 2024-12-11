@@ -4,10 +4,17 @@
     --bg-color--: #fff
 }
 
-body{
-    background: var(--text-color--);
-    color: var(--bg-color--);
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
+
+h1, h2 {
+    color: #333;
+}
+
 
 .heading{
     max-width: 968px;
@@ -43,4 +50,124 @@ body{
 .box .box-img img{
     transform: translateY(-10px);
     transition: 0,2 all linear;
+}
+
+
+.mo-header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mo-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative; /* Voor de logo-uitlijning links */
+}
+
+.mo-header-logo {
+    position: absolute;
+    left: 20px; /* Zet het logo vast aan de linkerzijde */
+}
+
+.mo-header-title {
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mo-header-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.mo-header-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.mo-header-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer stijlen */
+.mo-footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.mo-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.mo-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Coming Soon pagina */
+.mo-coming-main {
+    padding: 20px;
+}
+
+.mo-coming-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mo-coming-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mo-coming-film {
+    display: flex;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mo-coming-film-image {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.mo-coming-film-info {
+    padding: 15px;
+    flex: 1;
+}
+
+.mo-coming-film-title {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.mo-coming-film-description {
+    font-size: 1em;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.mo-coming-film-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.mo-coming-film-link:hover {
+    text-decoration: underline;
 }
