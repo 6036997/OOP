@@ -1,173 +1,111 @@
-:root {
-    --main-color--: #ff2c1f;
-    --text-color--: #020307;
-    --bg-color--: #fff
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-}
-
-h1, h2 {
-    color: #333;
-}
-
-
-.heading{
-    max-width: 968px;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    border-bottom: 1px solid var(--main-color--);
-}
-
-.movie-container {
-    max-width: 068px;
-    margin-right: auto;
-    margin-left: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.box .box-img {
-    width: 100%;
-    height: 270px;
-}
-
-.box .box-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.box .box-img img{
-    transform: translateY(-10px);
-    transition: 0,2 all linear;
-}
-
-
-.mo-header {
-    background-color: #222;
+    background-color: #111;
     color: #fff;
-    padding: 10px 20px;
+}
+header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.mo-header-container {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative; /* Voor de logo-uitlijning links */
-}
-
-.mo-header-logo {
-    position: absolute;
-    left: 20px; /* Zet het logo vast aan de linkerzijde */
-}
-
-.mo-header-title {
-    color: #fff;
-    font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.mo-header-nav {
-    display: flex;
-    gap: 15px;
-}
-
-.mo-header-link {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1em;
-}
-
-.mo-header-link:hover {
-    text-decoration: underline;
-}
-
-/* Footer stijlen */
-.mo-footer {
     background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-.mo-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.mo-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Coming Soon pagina */
-.mo-coming-main {
     padding: 20px;
 }
-
-.mo-coming-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.mo-coming-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mo-coming-film {
-    display: flex;
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.mo-coming-film-image {
-    width: 150px;
-    height: 200px;
-    object-fit: cover;
-}
-
-.mo-coming-film-info {
-    padding: 15px;
-    flex: 1;
-}
-
-.mo-coming-film-title {
-    font-size: 1.5em;
-    margin: 0 0 10px;
-}
-
-.mo-coming-film-description {
-    font-size: 1em;
-    color: #666;
-    margin: 0 0 10px;
-}
-
-.mo-coming-film-link {
-    color: #007bff;
-    text-decoration: none;
+header .logo {
+    font-size: 24px;
     font-weight: bold;
 }
-
-.mo-coming-film-link:hover {
-    text-decoration: underline;
+header nav {
+    display: flex;
+    gap: 20px;
+}
+header nav a {
+    color: #fff;
+    text-decoration: none;
+}
+header .sign-in {
+    background-color: #ff4500;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+article {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+article img {
+    width: 100%;
+    height: auto;
+}
+.movie-info {
+    padding: 15px;
+}
+.movie-info h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.movie-info p {
+    font-size: 14px;
+    color: #aaa;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 50px;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer .newsletter {
+    margin-bottom: 20px;
+}
+footer .newsletter input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+footer .newsletter button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+footer .social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 18px;
+}
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
 }
