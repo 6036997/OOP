@@ -32,33 +32,104 @@ header .sign-in {
     border-radius: 5px;
     cursor: pointer;
 }
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-article {
-    background-color: #222;
-    border-radius: 10px;
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    height: 800px; /* Maak de container iets langer */
+    margin: auto;
     overflow: hidden;
-    text-align: center;
+    background-color: #000; /* Achtergrondkleur voor contrast */
 }
-article img {
+
+.slide img {
     width: 100%;
-    height: auto;
+    height: 100%; /* Vul de container volledig */
+    object-fit: cover; /* Zorg dat de afbeeldingen goed worden bijgesneden */
+    display: block;
 }
-.movie-info {
-    padding: 15px;
+
+
+.text-overlay {
+    position: absolute; /* Plaatst de tekst bovenop de afbeelding */
+    top: 50%; /* Centreer verticaal */
+    left: 5%; /* Plaats de tekst aan de linkerzijde */
+    transform: translateY(-50%); /* Verschuif 50% omhoog om exact te centreren */
+    color: #fff; /* Witte tekstkleur voor leesbaarheid */
+    background: rgba(0, 0, 0, 0.6); /* Donkere overlay-achtergrond */
+    padding: 20px; /* Ruimte rondom de tekst */
+    border-radius: 5px; /* Ronde hoeken */
+    text-align: left; /* Zorg dat de tekst links uitgelijnd blijft */
+    max-width: 40%; /* Beperk de breedte van de tekstbox */
 }
-.movie-info h3 {
-    font-size: 18px;
-    margin: 10px 0;
+
+.text-overlay h1, 
+.text-overlay h2 {
+    margin: 10px 0; /* Voeg wat ruimte tussen titels toe */
 }
-.movie-info p {
-    font-size: 14px;
-    color: #aaa;
+
+.book-btn {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-transform: uppercase;
 }
+
+.book-btn:hover {
+    background-color: darkred;
+}
+
+
+/* Navigatieknoppen */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    padding: 0 20px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+/* Stijl voor navigatiedots */
+.dot-container {
+    position: absolute; /* Zet het op de afbeelding */
+    bottom: 20px; /* Plaats het 20px vanaf de onderkant van de foto */
+    left: 50%; /* Centreer horizontaal */
+    transform: translateX(-50%); /* Centreer precies */
+    z-index: 10; /* Zorg dat de dots bovenop de afbeelding komen */
+    display: flex;
+    gap: 8px; /* Voeg ruimte toe tussen de dots */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5); /* Witte, semi-transparante kleur */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: red; /* Actieve dot in een opvallende kleur */
+}
+
+
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 500px; /* Kleinere hoogte voor mobiele apparaten */
+    }
+}
+
 footer {
     background-color: black;
     color: white;
